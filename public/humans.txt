@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  NewAperio: Logan Leger, Evan Cordell, Christian Bankester, Chris Keele
+  Site: http://newaperio.com
+  Twitter: @newaperio
+  Location: Baton Rouge, LA
+
+/* THANKS */
+  Names (& URL): 
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Rails, nginx, Linode, Textmate, Photoshop

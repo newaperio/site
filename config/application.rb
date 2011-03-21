@@ -8,10 +8,11 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Newaperio11
   class Application < Rails::Application
+ 		config.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log", 50, 1048576)
     # Added by the Rails 3 jQuery Template
 	  # http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
-	  config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
-	  config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)
+	  config.action_view.javascript_expansions[:defaults] = %w(jquery rails application)
+	  config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails application)
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
