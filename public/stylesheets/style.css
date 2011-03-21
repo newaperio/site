@@ -318,10 +318,10 @@ input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px s
 
 #about_text {
   float: left;
-  width: 45%;
+  width: 450px;
 }
 #about_us {
-  width: 40%;
+  width: 400px;
   padding-left: 50px;
   float: left;
 }
