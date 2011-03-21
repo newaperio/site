@@ -243,7 +243,7 @@ p { margin-bottom: 15px; }
     font-weight: normal;
   }
   #sayhello {
-    font-size: 16px;
+    font-size: 14px;
     color: #6eb0a3;
     padding: 5px 0;
     margin: 10px 0;
@@ -316,14 +316,18 @@ input.nice_input { margin-bottom: 10px; border: 1px solid #6eb0a3; padding: 5px 
 textarea.nice_input { width: 250px; height: 150px; border: 1px solid #6eb0a3; }
 input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px solid #c97836; }
 
-section#about_text {
+#about_text {
   float: left;
   width: 45%;
 }
-section#about_us {
+#about_us {
   width: 40%;
   padding-left: 50px;
   float: left;
+}
+#about_us img {
+  float: left;
+  padding: 0 5px 5px 0;
 }
 
 
