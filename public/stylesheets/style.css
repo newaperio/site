@@ -329,7 +329,15 @@ input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px s
   float: left;
   padding: 0 5px 5px 0;
 }
-
+#contact {
+  float: left;
+  width: 450px;
+}
+#location {
+  width: 400px;
+  padding-left: 50px;
+  float: left;
+}
 
 
 
