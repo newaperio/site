@@ -29,12 +29,13 @@ GEM
       activesupport (= 3.0.5)
     activesupport (3.0.5)
     arel (2.0.9)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capistrano (2.5.20)
       highline
       highline
-      net-scp (>= 1.0.0)
       net-scp
+      net-scp (>= 1.0.0)
       net-sftp
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
@@ -90,6 +91,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   capistrano
   kaminari
   mysql2
