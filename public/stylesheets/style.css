@@ -168,6 +168,7 @@ a:hover { color: #c97836; }
  * Author: Logan Leger
  */
 
+html, body {height: 100%;}
 body {
   font: 14px sans-serif #444;
   line-height: 1.5;
@@ -186,7 +187,14 @@ h2 {
 p { margin-bottom: 15px; }
 #container {
   width: 900px;
-  margin: 25px auto;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -90px;
+}
+.push { height: 90px; }
+#head {
+  margin-top: 25px;
 }
 #header {
   margin-bottom: 25px;
@@ -202,6 +210,9 @@ p { margin-bottom: 15px; }
     width: 136px;
     height: 83px;
   }
+#head {
+/*  margin-top: 25px;*/
+}
 #head nav {
   float: right;
   margin-top: 50px;
@@ -289,8 +300,8 @@ section#main_content {
 footer {
   background: url('/images/footer_bg.png') repeat-x;
   color: #c97836;
-  margin-top: 25px;
-  padding: 10px 75px;
+  padding-top: 10px;
+  height: 90px;
 }
   footer a {
     color: #c97836;
@@ -306,9 +317,14 @@ footer {
   }
   footer address {
     float: right;
+    text-align: right;
   }
   footer p {
     margin: 0;
+  }
+  #footercontent {
+    width: 900px;
+    margin: 0 auto;
   }
 form { margin: 25px 0;  }
 label { font-weight: bold; }

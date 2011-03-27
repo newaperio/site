@@ -36,21 +36,24 @@
     <div id="main" role="main" class="clearfix">
 		<%= yield %>
     </div>
+    <div class="push"></div>
   </div> <!--! end of #container -->
 
   <footer class="clearfix">
-		<nav role="footer">
-			<a href="/about" title="About NewAperio">about</a>
-			<a href="/portfolio" title="NewAperio's Portfolio">portfolio</a>				
-			<a href="/blog" title="NewAperio Blog" id="nav_blog">blog</a>
-			<a href="/contact" title="Contact NewAperio" id="nav_contact">contact</a>
-		</nav>
-		<address>
-			<p>&copy;2011, NewAperio, LLC</p>
-			<a href="mailto:hello@newaperio.com">hello@newaperio.com</a>
-			<p>225/328.7022</p>
-			<p>From Baton Rouge, with love.</p>
-		</address>
+		<div id="footercontent">
+			<nav role="footer">
+				<a href="/about" title="About NewAperio">about</a>
+				<a href="/portfolio" title="NewAperio's Portfolio">portfolio</a>				
+				<a href="/blog" title="NewAperio Blog" id="nav_blog">blog</a>
+				<a href="/contact" title="Contact NewAperio" id="nav_contact">contact</a>
+			</nav>
+			<address>
+				<p>&copy;2011, NewAperio, LLC</p>
+				<a href="mailto:hello@newaperio.com">hello@newaperio.com</a>
+				<p>225/328.7022</p>
+				<p>From Baton Rouge, with love.</p>
+			</address>			
+		</div>
   </footer>
 
 	<%= javascript_include_tag :cdn %>
