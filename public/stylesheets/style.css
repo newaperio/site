@@ -184,6 +184,11 @@ h2 {
   font-size: 28px;
   margin-bottom: 10px;
 }
+h3 {
+  color: #6eb0a3;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
 p { margin-bottom: 15px; }
 #container {
   width: 900px;
