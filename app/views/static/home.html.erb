@@ -25,28 +25,22 @@
 		<h3>From the blog</h3>
 		<h4>Read our words, understand our mind.</h4>
 	</header>
-	<article>
-		<header>
-			<h5>Coming Soon</h5>
-			<!-- <div class="meta"><time datetime="" pubdate>March 19, 2011</time> &mdash; <p>14 Comments</p></div> -->
-		</header>
-		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris&hellip;</p> -->
-		<!-- <p><a href="#more">Read more &rarr;</a></p> -->
-	</article>
-	<!-- <article>
-		<header>
-			<h5>Rails Models, described with math</h5>
-			<div class="meta"><time datetime="" pubdate>March 19, 2011</time> &mdash; <p>14 Comments</p></div>
-		</header>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris&hellip;</p>
-		<p><a href="#more">Read more &rarr;</a></p>
-	</article>
-	<article class="last">
-		<header>
-			<h5>Rails Models, described with math</h5>
-			<div class="meta"><time datetime="" pubdate>March 19, 2011</time> &mdash; <p>14 Comments</p></div>
-		</header>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris&hellip;</p>
-		<p><a href="#more">Read more &rarr;</a></p>
-	</article> -->
+	<% if !@posts.blank? %>
+	  <% for post in @posts %>
+		<article>
+			<header>
+				<h5><%= link_to post.title, post %></h5>
+				<div class="meta"><time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> &mdash; <p><%= pluralize(post.comments.count,"comment") %></p></div>
+			</header>
+			<p><%= truncate(post.content, :length => 150, :seperator => " ") %></p>
+			<% if post.content.length > 150 %><p><%= link_to "Continued", post %></p><% end %>
+		</article>
+	  <% end %>
+	<% else %>
+	  <article>
+			<header>
+				<h5>Coming Soon</h5>
+			</header>
+		</article>
+	<% end %>	
 </section><!-- #right -->
