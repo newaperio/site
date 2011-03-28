@@ -1,0 +1,17 @@
+<h1>New blog post</h1>
+
+<%= form_for @post, :url => blog_admin_create_path do |f| -%>
+  <p><%= f.label :title %><br />
+  <%= f.text_field :title %></p>
+
+	<p><%= f.label :author_id, "Author" %><br />
+	<%= f.select :author_id, Author.all.map { |a| [a.name, a.id] }, :selected => current_user.id %></p>
+	
+	<p><%= f.label :category_id, "Category" %><br />
+	<%= f.select :category_id, Category.all.map { |a| [a.name, a.id] } %></p>
+	
+	<p><%= f.label :content %><br />
+	<%= f.text_area :content %></p>
+
+	<%= f.submit "Submit", :disable_with => 'Saving...' %>
+<% end -%>

@@ -11,6 +11,12 @@ Newaperio11::Application.routes.draw do
 			get "login" => "sessions#new", :as => "login"
 			post "login" => "sessions#create", :as => "do_login"
 			constraints lambda { |req| !req.session[:author_id].blank? } do
+				get "/" => "blog_admin#index", :as => "blog_admin_index"
+				post "/" => "blog_admin#create", :as => "blog_admin_create"
+				get "/new" => "blog_admin#new", :as => "blog_admin_new"
+				get "/:id/edit" => "blog_admin#edit", :as => "blog_admin_edit"
+				put "/:id" => "blog_admin#update", :as => "blog_admin_update"
+				delete "/:id" => "blog_admin#destroy", :as => "blog_admin_destroy"
 			end
 		end
 		get "/" => "posts#index", :as => :blog

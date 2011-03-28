@@ -1,0 +1,12 @@
+<h1>Blog Admin</h1>
+<p><%= link_to "New blog", blog_admin_new_path %></p>
+
+<ul>
+	<% if !@posts.blank? %>
+	  <% for post in @posts %>
+	    <li><%= post.title %> (<%= link_to "edit", blog_admin_edit_path(post) %> &middot; <%= link_to "delete", blog_admin_destroy_path(post), :confirm => "Are you sure you want to delete this blog post? This cannot be undone.", :method => :delete %>)</li>
+	  <% end %>
+	<% else %>
+	  <p>No posts yet!</p>
+	<% end %>
+</ul>
