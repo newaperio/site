@@ -11,3 +11,5 @@ Author.create([	{:name => 'Logan Leger', :email => 'logan@newaperio.com', :passw
 								{:name => "Christian Bankester", :email => "christian@newaperio.com", :password => "christianlikesmath"},
 								{:name => "Chris Keele", :email => "chris@newaperio.com", :password => "diabetesforlife"},
 								{:name => "NewAperio", :email => "hello@newaperio.com", :password => "NewAperioWinsEveryday"}])
+								
+Category.create([{:name => "Rails"}, {:name => "iPhone"}, {:name => "iPad"}, {:name => "Android"}, {:name => "Entrepreneurship"}, {:name => "Design"}])
