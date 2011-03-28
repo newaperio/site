@@ -5,4 +5,3 @@ gem 'mysql2'
 gem 'capistrano'
 gem 'kaminari'
 gem "bcrypt-ruby", :require => "bcrypt"
-gem "bluecloth"
