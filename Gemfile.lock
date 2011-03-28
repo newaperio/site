@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.5)
     arel (2.0.9)
     bcrypt-ruby (2.1.4)
+    bluecloth (2.1.0)
     builder (2.1.2)
     capistrano (2.5.20)
       highline
@@ -92,6 +93,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
+  bluecloth
   capistrano
   kaminari
   mysql2
