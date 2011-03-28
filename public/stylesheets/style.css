@@ -355,7 +355,29 @@ input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px s
   float: left;
 }
 
-
+#flash_error, #flash_notice, #flash_success {
+  padding: .8em;
+  margin: 0 0 1em 0;
+  border: 2px solid #ddd;
+}
+#flash_error {
+  background: #FBE3E4;
+  color: #8a1f11;
+  border-color: #FBC2C4;
+}
+#flash_notice {
+  background: #FFF6BF;
+  color: #514721;
+  border-color: #FFD324;
+}
+#flash_success {
+  background: #E6EFC2;
+  color: #264409;
+  border-color: #C6D880;
+}
+#flash_error a { color: #8a1f11; }
+#flash_notice a { color: #514721; }
+#flash_success a { color: #264409; }
 
 
 

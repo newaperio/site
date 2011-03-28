@@ -34,6 +34,9 @@
 			</nav>
     </header>
     <div id="main" role="main" class="clearfix">
+		<% flash.each do |name, msg| %>
+		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+		<% end %>
 		<%= yield %>
     </div>
     <div class="push"></div>
