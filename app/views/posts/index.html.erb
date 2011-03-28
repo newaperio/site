@@ -4,8 +4,8 @@
 		<h2><%= link_to post.title, post %></h2>
 		<div class="meta"><time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> &mdash; <p><%= pluralize(post.comments.count,"comment") %></p></div>
 	</header>
-	<p><%= truncate(post.content, :length => 500, :seperator => " ") %></p>
-	<% if post.content.length > 500 %><p><%= link_to "Continued", post %></p><% end %>
+	<p><%= truncate(post.content, :length => 1000) %></p>
+	<% if post.content.length > 1000 %><p><%= link_to "Continued", post %></p><% end %>
 </article>
 <% end %>
 
