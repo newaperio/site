@@ -1,6 +1,10 @@
 class BlogAdminController < ApplicationController
   def index
-		@posts = Post.order("created_at desc").page(params[:page]).per(10)
+		if current_user
+			@posts = Post.order("created_at desc").page(params[:page]).per(10)
+		else
+			redirect_to login_path, :notice => "You must be logged in to do that."
+		end
   end
 
   def new
@@ -33,10 +37,7 @@ class BlogAdminController < ApplicationController
 
   def destroy
 		@post = Post.find(params[:id])
-		if @post.destroy
-			redirect_to blog_admin_index_path, :notice => "Post successfully deleted."
-		else
-			redirect_to blog_admin_index_path, :notice => "Error deleting post. Please try again."
-		end
+		@post.destroy
+		redirect_to blog_admin_index_path, :notice => "Post successfully deleted."
   end
 end

@@ -8,8 +8,8 @@ Newaperio11::Application.routes.draw do
 				get "logout" => "sessions#destroy", :as => :logout
 				get "login" => "sessions#new", :as => :login
 				post "login" => "sessions#create", :as => :do_login
+				get "/" => "blog_admin#index", :as => :blog_admin_index				
 				constraints lambda { |req| req.session[:author_id].present? } do
-					get "/" => "blog_admin#index", :as => :blog_admin_index
 					post "/" => "blog_admin#create", :as => :blog_admin_create
 					get "/new" => "blog_admin#new", :as => :blog_admin_new
 					get "/:id/edit" => "blog_admin#edit", :as => :blog_admin_edit
