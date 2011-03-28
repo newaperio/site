@@ -361,8 +361,8 @@ input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px s
 }
 
 #flash_error, #flash_notice, #flash_success {
-  padding: .8em;
-  margin: 0 0 1em 0;
+  padding: 10px;
+  margin: 15px 0 15px 0;
   border: 2px solid #ddd;
 }
 #flash_error {
