@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	has_one :author
+	belongs_to :author
 	belongs_to :category
 	has_many :comments
 	
