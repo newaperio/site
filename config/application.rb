@@ -44,5 +44,7 @@ module Newaperio11
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.autoload_paths += %W(#{Rails.root}/lib)
   end
 end

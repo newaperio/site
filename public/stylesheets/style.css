@@ -378,16 +378,16 @@ input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px s
 #flash_notice a { color: #514721; }
 #flash_success a { color: #264409; }
 
-article#single .meta {
+article.post .meta {
   font-weight: bold;
   color: #9e9f9f;
   border-bottom: 1px solid #6eb0a3;
 }
-  article#single header h2 {
+  article.post header h2 {
     margin-bottom: 0;
   }
-  article#single time, article#single header p {
-    display: inline;
+  article.post header h2 a {
+    text-decoration: none;
   }
 div#post {
   float: left;
@@ -401,6 +401,14 @@ div#sidebar {
 div#sidebar ul {
   list-style-type: none;
   margin-left: 0;
+}
+pre {
+  overflow-x: auto;
+  background: #eee;
+  border: 1px solid #d5d5d5;
+}
+code {
+  font-family: "Anonymous Pro", monospace, sans-serif;
 }
 
 
