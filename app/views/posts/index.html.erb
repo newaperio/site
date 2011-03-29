@@ -1,8 +1,8 @@
 <% for post in @posts %>
-<article>
+<article class="post">
 	<header>
 		<h2><%= link_to post.title, post %></h2>
-		<div class="meta"><time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> &mdash; <p><%= pluralize(post.comments.count,"comment") %></p></div>
+		<div class="meta">by <%= post.author.name %> on <time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> with <%= pluralize(post.comments.count,"comment") %></div>
 	</header>
 	<p><%= simple_format(post.content) %></p>
 </article>
