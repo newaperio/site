@@ -8,6 +8,6 @@ class PostsController < ApplicationController
   end
 
 	def search
-		
+		@posts = Post.search(params[:term]).page(params[:page]).per(10)
 	end
 end
