@@ -377,7 +377,9 @@ input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px s
 #flash_error a { color: #8a1f11; }
 #flash_notice a { color: #514721; }
 #flash_success a { color: #264409; }
-
+article.post {
+  margin-bottom: 50px;
+}
 article.post .meta {
   font-weight: bold;
   color: #9e9f9f;
