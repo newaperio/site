@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 	    session[:author_id] = author.id
 	    redirect_to blog_admin_index_path, :notice => "Logged in!"
 	  else
-	    flash.now.alert = "Invalid email or password"
+	    flash[:notice] = "Invalid email or password."
 	    render "new"
 	  end
 	end
