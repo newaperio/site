@@ -1,0 +1,14 @@
+<p>This cleverly titled blog is authored by NewAperio, a web and mobile development collective in Baton Rouge. We write about programming, design and entrepreneurship. Read more <%= link_to "about us", about_path %>.</p>
+
+<p>To keep up, <a href="http://twitter.com/newaperio" title="Follow NewAperio on Twitter">follow us on Twitter</a> or subscribe via RSS.</p>
+
+<h3>Categories</h3>
+<ul>
+  <% for category in Category.all %>
+    <li><%= category.name %></li>
+  <% end %>
+</ul>
+
+<%= form_tag(search_path, :method => "get") do %>
+  <%= search_field_tag(:q, nil, :placeholder => "Search") %>
+<% end %>

@@ -1,0 +1,85 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>NewAperio &mdash; Web and Mobile Engineering in Baton Rouge, Louisiana</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<%= stylesheet_link_tag "style" %>
+
+	<%= stylesheet_link_tag "handheld", :media => "handheld" %>
+
+	<%= javascript_include_tag "modernizr" %>
+	
+	<%= csrf_meta_tag %>
+</head>
+
+<body>
+
+  <div id="container">
+    <header id="head" class="clearfix">
+			<h1 id="logo"><a href="/" title="NewAperio" class="ir">NewAperio</a></h1>
+			<nav role="header">
+				<a href="/about" title="About NewAperio" id="nav_about" class="ir">About</a>
+				<a href="/portfolio" title="NewAperio's Portfolio" id="nav_portfolio" class="ir">Portfolio</a>				
+				<a href="/blog" title="NewAperio Blog" id="nav_blog" class="ir">Blog</a>
+				<a href="/contact" title="Contact NewAperio" id="nav_contact" class="ir">Contact</a>
+			</nav>
+    </header>
+    <div id="main" role="main" class="clearfix">
+		<% flash.each do |name, msg| %>
+		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+		<% end %>
+		<div id="post">
+			<%= yield %>
+		</div>
+		<div id="sidebar">
+			<%= render :partial => "layouts/sidebar" %>
+		</div>
+    </div>
+    <div class="push"></div>
+  </div> <!--! end of #container -->
+
+  <footer class="clearfix">
+		<div id="footercontent">
+			<nav role="footer">
+				<a href="/about" title="About NewAperio">about</a>
+				<a href="/portfolio" title="NewAperio's Portfolio">portfolio</a>				
+				<a href="/blog" title="NewAperio Blog" id="nav_blog">blog</a>
+				<a href="/contact" title="Contact NewAperio" id="nav_contact">contact</a>
+			</nav>
+			<address>
+				<p>&copy;2011, NewAperio, LLC</p>
+				<a href="mailto:hello@newaperio.com">hello@newaperio.com</a>
+				<p>225/328.7022</p>
+				<p>From Baton Rouge, with love.</p>
+			</address>			
+		</div>
+  </footer>
+
+	<%= javascript_include_tag :cdn %>
+  <script>window.jQuery || document.write("<script src='/javascripts/jquery.js'>\x3C/script>")</script>
+
+  <!--[if lt IE 7 ]>
+		<%= javascript_include_tag "dd_belatedpng" %>
+    <script>DD_belatedPNG.fix("img, .png_bg");</script>
+  <![endif]-->
+
+  <script>
+    var _gaq=[["_setAccount","UA-15433099-1"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+
+</body>
+</html>
