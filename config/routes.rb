@@ -17,6 +17,7 @@ Newaperio11::Application.routes.draw do
 			end
 		end
 		get "/" => "posts#index", :as => :blog
+		get "/search" => "posts#search", :as => :search						
 		get "/:id" => "posts#show", :as => :post
 	end
 		root :to => "static#home"
