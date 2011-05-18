@@ -20,6 +20,7 @@ Newaperio11::Application.routes.draw do
 		get "/search" => "posts#search", :as => :search						
 		get "/category/:id" => "posts#category", :as => :category
 		get "/:id" => "posts#show", :as => :post
+		post "/:id/comment" => "comments#create", :as => :comments
 	end
 		root :to => "static#home"
 end
