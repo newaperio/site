@@ -6,6 +6,9 @@ ActiveAdmin::Dashboards.build do
       column :author, :sortable => :author_id do |post|
         link_to post.author.name, admin_author_path(post.author)
       end
+      column :category do |post|
+        link_to post.category.name, admin_category_path(post.category.id)
+      end
       column :comments do |post|
         post.comments.count.to_s
       end
@@ -47,6 +50,18 @@ ActiveAdmin::Dashboards.build do
     filter :name
     filter :email
     config.comments = false
+  end
+  ActiveAdmin.register Category do
+    index do
+      column :id
+      column :name
+      column :posts do |category|
+        category.posts.count.to_s
+      end
+      default_actions
+    end
+    config.comments = false
+    filter :name
   end
 
   section "Recent Posts" do
