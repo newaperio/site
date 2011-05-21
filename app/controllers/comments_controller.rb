@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+  def new
+    @comment = Comment.new
+  end
+  
   def create
     @comment = Comment.new(params[:comment])
  
@@ -6,8 +10,10 @@ class CommentsController < ApplicationController
       flash[:notice] = 'Comment was successfully created.'
       redirect_to(@comment.post)
     else
-      flash[:notice] = "Error creating comment: #{@comment.errors}"
-      redirect_to(@comment.post)
+      flash[:notice] = "Please fill out all the required comment fields."
+      @post = Post.find(params[:post_id])
+  		@comments = @post.comments.page(params[:page]).per(20)
+      render :action => "posts/show"
     end
   end
  

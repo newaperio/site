@@ -16,11 +16,17 @@ Newaperio11::Application.routes.draw do
 				delete "/:id" => "blog_admin#destroy", :as => :blog_admin_destroy
 			end
 		end
-		get "/" => "posts#index", :as => :blog
-		get "/search" => "posts#search", :as => :search						
-		get "/category/:id" => "posts#category", :as => :category
-		get "/:id" => "posts#show", :as => :post
-		post "/:id/comment" => "comments#create", :as => :comments
+    # get "/" => "posts#index", :as => :blog
+    # get "/category/:id" => "posts#category", :as => :category
+    # get "/:id" => "posts#show", :as => :post
+    # post "/:post_id/comment" => "comments#create", :as => :comments
 	end
-		root :to => "static#home"
+	resources :blog, :as => "post", :controller => "posts" do
+	  collection do
+	    get "search"
+	    get "category/:id" => "posts#category", :as => :category
+	  end
+	  resources :comments
+	end
+	root :to => "static#home"
 end
