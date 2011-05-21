@@ -8,3 +8,4 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem "coderay"
 gem "RedCloth"
 gem 'activeadmin'
+gem "haml", "3.0.24"
