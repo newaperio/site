@@ -1,4 +1,4 @@
-<h2><%= @posts.count %> results for &lsquo;<%= params[:term] %>&rsquo;</h2>
+<h2><%= pluralize(@posts.count, 'result') %> for &lsquo;<%= params[:term] %>&rsquo;</h2>
 
 <% for post in @posts %>
 <article class="post">

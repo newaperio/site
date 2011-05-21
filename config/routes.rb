@@ -1,4 +1,5 @@
 Newaperio11::Application.routes.draw do
+  devise_for :authors, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 	get 'about' => 'static#about', :as => :about
 	get 'portfolio' => 'static#portfolio', :as => :portfolio

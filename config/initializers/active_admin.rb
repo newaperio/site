@@ -32,7 +32,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # within the controller.
-  config.authentication_method = false
+  config.authentication_method = :authenticate_author!
 
 
   # == Current User
@@ -42,7 +42,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # to return the currently logged in user.
-  config.current_user_method = false
+  config.current_user_method = :current_author
   
 
   # == Admin Notes
@@ -52,7 +52,7 @@ ActiveAdmin.setup do |config|
   # Admin notes are enabled by default, but can be disabled
   # by uncommenting this line:
   #
-  config.admin_notes = false
+  config.admin_notes = true
 
 
   # == Controller Filters

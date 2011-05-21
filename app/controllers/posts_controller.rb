@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
 	def search
-		@posts = Post.search(params[:term]).page(params[:page]).per(10)
+		@posts = Post.front_end_search(params[:term]).page(params[:page]).per(10)
 	end
 	
 	def category
