@@ -1,12 +1,12 @@
 require "bundler/capistrano"
 
 set :application, "newaperio"
-set :repository,  "git@github.com:lleger/newaperio-11.git"
+set :repository,  "git@github.com:newaperio/site.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
 
 set :scm, :git
-set :scm_username, "lleger"
+set :scm_username, "newaperio"
 
 role :web, "newaperio.com"                          # Your HTTP server, Apache/etc
 role :app, "newaperio.com"                          # This may be the same as your `Web` server
