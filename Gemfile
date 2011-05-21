@@ -7,3 +7,4 @@ gem 'kaminari'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "coderay"
 gem "RedCloth"
+gem 'activeadmin'
