@@ -1,4 +1,4 @@
-<h2><%= @posts.count %> posts in <%= @category.name %></h2>
+<h2><%= pluralize(@posts.count, 'post') %> in <%= @category.name %></h2>
 
 <% for post in @posts %>
 <article class="post">

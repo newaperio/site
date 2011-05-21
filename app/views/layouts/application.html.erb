@@ -8,9 +8,10 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>NewAperio &mdash; Web and Mobile Engineering in Baton Rouge, Louisiana</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title><% if content_for(:title).present? %><%= yield(:title) %> &mdash; NewAperio<% else %>NewAperio &mdash; Web and Mobile Engineering in Baton Rouge, Louisiana<% end %></title>
+  <meta name="description" content="NewAperio is a web, iPhone, iPad, iOS, Android and Blackberry app development and design collective in Baton Rouge, Louisiana. We're a group of web and mobile entrepreneurs and engineers who love creating magnificient apps for our clients.">
+  <meta name="author" content="NewAperio">
+	<meta name="keywords" content="web app, web development, app, app development, engineer, entrepreneur, iPhone, iPad, iOS, Android, Blackberry" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

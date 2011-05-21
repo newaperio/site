@@ -325,12 +325,10 @@ footer {
     width: 900px;
     margin: 0 auto;
   }
-form { margin: 25px 0;  }
 label { font-weight: bold; }
 input.nice_input { margin-bottom: 10px; border: 1px solid #6eb0a3; padding: 5px }
 textarea.nice_input { width: 250px; height: 150px; border: 1px solid #6eb0a3; }
 input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px solid #c97836; }
-
 #about_text {
   float: left;
   width: 450px;
@@ -353,7 +351,6 @@ input.nice_input:focus, textarea.nice_input:focus { outline: none; border: 1px s
   padding-left: 50px;
   float: left;
 }
-
 #flash_error, #flash_notice, #flash_success {
   padding: 10px;
   margin: 15px 0 15px 0;
@@ -404,6 +401,9 @@ div#sidebar ul {
   list-style-type: none;
   margin-left: 0;
 }
+div#sidebar form {
+  margin: 25px 0;
+}
 pre {
   overflow-x: auto;
   background: #eee;
@@ -412,7 +412,32 @@ pre {
 code {
   font-family: "Anonymous Pro", monospace, sans-serif;
 }
-
+.field_with_errors {
+  display: inline;
+  color: #8a1f11;
+}
+#error_explanation strong {
+  color: #8a1f11;
+}
+#addcomment {
+  padding: 25px 0;
+}
+.comment_meta {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #6eb0a3;
+}
+  .comment_author {
+    font-weight: bold;
+    color: #6eb0a3;
+    margin-bottom: 0;
+    display: inline;
+  }
+  .comment_meta time {
+    font-weight: bold;
+    color: #9e9f9f;
+    display: inline;
+  }
 
 
 /**

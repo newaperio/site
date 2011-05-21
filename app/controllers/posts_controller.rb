@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def show
 		@post = Post.find(params[:id])
-		@comments = @post.comments.page(params[:page]).per(20)
+		@comments = @post.comments
 		@comment = Comment.new(:post => @post)
   end
 
@@ -16,5 +16,12 @@ class PostsController < ApplicationController
 	def category
 		@category = Category.find_by_name(params[:id])
 		@posts = Post.where("category_id = ?",@category.id).page(params[:page]).per(10)
+	end
+	
+	def feed
+	  @posts = Post.order("created_at DESC").limit(20) 
+	  respond_to do |format|
+	   format.rss { render :layout => false }
+	  end
 	end
 end

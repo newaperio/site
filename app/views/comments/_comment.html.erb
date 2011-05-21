@@ -1,4 +1,12 @@
 <div class="comment">
-  <i><%=h comment.name %> says:</i><br />
-  <%= simple_format h(comment.content) %>
+	<div id="comment_meta">
+		<% if comment.url.present? %>
+	  <p class="comment_author"><%= link_to comment.name, comment.url %> says:</p>
+		<% else %>
+	  <p class="comment_author"><%= comment.name %> says:<br /></p>
+		<% end %>
+	</div>
+	<div class="comment_content">
+		<%= simple_format h(comment.content) %>
+	</div>
 </div>

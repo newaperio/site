@@ -1,4 +1,13 @@
-<div class="comment">
-  <i><%=h comment.name %> says:</i><br />
-  <%= simple_format h(comment.content) %>
+<div class="comment<%= is_staff(comment.name, comment.email) %>">
+	<div class="comment_meta">
+		<% if comment.url.present? %>
+	  <p class="comment_author"><%= link_to comment.name, comment.url %></p>
+		<% else %>
+	  <p class="comment_author"><%= comment.name %></p>
+		<% end %>
+		<time datetime="<%= @post.updated_at %>" pubdate><%= comment.updated_at.to_s(:short) %></time>
+	</div>
+	<div class="comment_content">
+		<%= simple_format h(comment.content) %>
+	</div>
 </div>
