@@ -17,8 +17,4 @@ class PostsController < ApplicationController
 		@category = Category.find_by_name(params[:id])
 		@posts = Post.where("category_id = ?",@category.id).page(params[:page]).per(10)
 	end
-	
-	def addcomment
-	  @post.comments.add(@newcomment)
-	end
 end
