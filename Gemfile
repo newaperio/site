@@ -7,5 +7,6 @@ gem 'kaminari'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "coderay"
 gem "RedCloth"
+gem "redcarpet"
 gem 'activeadmin'
 gem "haml", "3.0.24"

@@ -1,12 +1,6 @@
 module ApplicationHelper
   def textilize(text)
-    Textilizer.new(text).to_html.html_safe unless text.blank?
-  end
-  
-  def coderay(text)
-    text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
-      content_tag('notextile', CodeRay.scan($3, $2).div(:css => :class).html_safe)
-    end
+    CodeFormatter.new(text).to_html.html_safe unless text.blank?
   end
   
   def title(page_title)

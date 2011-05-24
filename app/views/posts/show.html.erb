@@ -4,7 +4,7 @@
 		<h2><%= @post.title %></h2>
 		<div class="meta">by <%= @post.author.name %> on <time datetime="<%= @post.updated_at %>" pubdate><%= @post.updated_at.to_s(:short) %></time> with <%= pluralize(@comments.count,"comment") %></div>
 	</header>
-	<p><%= sanitize(textilize(coderay(@post.content))) %></p>
+	<p><%= textilize(@post.content) %></p>
 </article>
 
 <h3>Comments</h3>
