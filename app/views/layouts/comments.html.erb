@@ -15,8 +15,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<%= auto_discovery_link_tag(:rss, feed_post_index_url("rss")) %>
-
+	<%= auto_discovery_link_tag :atom, feed_post_index_url("atom") %>
+	<%= auto_discovery_link_tag :rss, feed_post_index_url("rss") %>
+	
 	<%= stylesheet_link_tag "style" %>
 
 	<%= stylesheet_link_tag "handheld", :media => "handheld" %>

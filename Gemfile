@@ -11,3 +11,5 @@ gem "RedCloth"
 gem "redcarpet"
 gem 'activeadmin'
 gem "haml", "3.0.24"
+gem 'wirble', :group => :development
+gem 'hirb', :group => :development

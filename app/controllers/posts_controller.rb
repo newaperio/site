@@ -21,7 +21,8 @@ class PostsController < ApplicationController
 	def feed
 	  @posts = Post.order("created_at DESC").limit(20) 
 	  respond_to do |format|
-	   format.rss { render :layout => false }
+      format.atom { render :layout => false }
+      format.rss { redirect_to feed_post_index_url("atom"), :status => :moved_permanently }
 	  end
 	end
 end
