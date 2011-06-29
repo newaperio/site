@@ -8,7 +8,7 @@ Newaperio11::Application.routes.draw do
 	  collection do
 	    get "search"
 	    get "category/:id" => "posts#category", :as => :category
-	    get "feed(.:format)" => "posts#feed", :as => :feed
+	    get "feed(.:format)" => "posts#feed", :as => :feed, :defaults => { :format => 'atom' }
 	  end
 	  resources :comments, :only => [:show, :create]
 	end
