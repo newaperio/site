@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-		@posts = Post.order("created_at desc").page(params[:page]).per(10)
+		@posts = Post.order("created_at DESC").page(params[:page]).per(10)
   end
 
   def show
@@ -10,12 +10,12 @@ class PostsController < ApplicationController
   end
 
 	def search
-		@posts = Post.front_end_search(params[:term]).page(params[:page]).per(10)
+		@posts = Post.front_end_search(params[:term]).order("created_at DESC").page(params[:page]).per(10)
 	end
 	
 	def category
 		@category = Category.find_by_name(params[:id])
-		@posts = Post.where("category_id = ?",@category.id).page(params[:page]).per(10)
+		@posts = Post.where("category_id = ?",@category.id).order("created_at DESC").page(params[:page]).per(10)
 	end
 	
 	def feed
