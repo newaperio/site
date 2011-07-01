@@ -8,6 +8,6 @@
 		<time datetime="<%= @post.updated_at %>" pubdate><%= comment.updated_at.to_s(:short) %></time>
 	</div>
 	<div class="comment_content">
-		<%= simple_format h(comment.content) %>
+		<%= textilize comment.content %>
 	</div>
 </div>
