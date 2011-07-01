@@ -8,8 +8,8 @@ class Comment < ActiveRecord::Base
 	private
 	
 	def http
-   unless self.url =~ /http[s]?:\/\//
-     self.url = "http://" + self.url
-   end
+	  if self.url.present?
+	    self.url = "http://" + self.url unless self.url =~ /http[s]?:\/\//
+	  end
 	end
 end
