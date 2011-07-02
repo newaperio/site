@@ -16,5 +16,17 @@ ActiveAdmin.register Post do
   end
   filter :author, :as => :select, :collection => lambda{ Author.all }
   filter :category, :as => :select, :collection => lambda{ Category.all }
+  
+  form do |f|
+    f.inputs do
+      f.input :author, :as => :select, :collection => Author.order("name ASC")
+      f.input :category, :as => :select, :collection => Category.order("name ASC")
+      f.input :post_type, :as => :select, :collection => PostType.order("created_at DESC")
+      f.input :title
+      f.input :content
+    end
+    f.buttons
+  end
+  
   config.comments = false      
 end

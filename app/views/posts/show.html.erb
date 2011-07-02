@@ -1,11 +1,5 @@
 <% title @post.title %>
-<article id="single" class="post">
-	<header>
-		<h2><%= @post.title %></h2>
-		<div class="meta">by <%= @post.author.name %> on <time datetime="<%= @post.updated_at %>" pubdate><%= @post.updated_at.to_s(:short) %></time> with <%= pluralize(@comments.count,"comment") %></div>
-	</header>
-	<p><%= textilize(@post.content) %></p>
-</article>
+<%= render :partial => @post.post_type.name.downcase, :locals => {:post => @post, :single => true} %>
 
 <h3>Comments</h3>
 
