@@ -1,7 +1,7 @@
 ActiveAdmin::Dashboards.build do
   section "Top Authors" do
     ol do
-      Author.includes(:posts).order("count(posts.id) DESC").collect do |author|
+      Author.all.keep_if { |a| a.posts.count > 0 }.sort { |a,b| b.posts.count <=> a.posts.count }.collect do |author|
         li link_to(author.name, admin_author_path(author)) + " (#{author.posts.count})"
       end
     end
