@@ -1,7 +1,7 @@
 <article <% if single %>id="single" <% end %>class="chat">
 	<header>
 		<h2><%= link_to post.title, post %></h2>
-		<div class="meta">by <%= post.author.name %> on <time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> with <%= pluralize(post.comments.count,"comment") %></div>
+		<div class="meta"><time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> / <%= pluralize(post.comments.count,"comment") %></div>		
 	</header>
 	<%= textilize(post.content) %>
 </article>

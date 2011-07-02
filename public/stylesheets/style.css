@@ -437,7 +437,28 @@ code {
     color: #9e9f9f;
     display: inline;
   }
-
+article.chat {
+  margin-bottom: 50px;
+}
+  article.chat ul, article.chat ol {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  article.chat li {
+   padding: 10px;
+   border-bottom: 1px dotted #e5c244;
+  }
+  article.chat .meta {
+    font-weight: bold;
+    color: #9e9f9f;
+    border-bottom: 1px solid #6eb0a3;
+  }
+  article.chat header h2 {
+    margin-bottom: 0;
+  }
+  article.chat header h2 a {
+    text-decoration: none;
+  }
 
 /**
  * Non-semantic helper classes: please define your styles before this section.
