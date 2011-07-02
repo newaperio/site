@@ -1,4 +1,12 @@
 ActiveAdmin::Dashboards.build do
+  section "Top Authors" do
+    ol do
+      Author.includes(:posts).order("count(posts.id) DESC").collect do |author|
+        li link_to(author.name, admin_author_path(author)) + " (#{author.posts.count})"
+      end
+    end
+  end
+  
   section "Recent Posts" do
     ul do
       Post.limit(15).order("created_at DESC").collect do |post|
