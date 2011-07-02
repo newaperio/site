@@ -459,6 +459,14 @@ article.chat {
   article.chat header h2 a {
     text-decoration: none;
   }
+  #interlocuter_0, #interlocuter_2 {
+    color: #6eb0a3;
+    font-weight: bold;
+  }
+  #interlocuter_1, #interlocuter_3 {
+    color: #c97836;
+    font-weight: bold;
+  }
 
 /**
  * Non-semantic helper classes: please define your styles before this section.

@@ -3,5 +3,15 @@
 		<h2><%= link_to post.title, post %></h2>
 		<div class="meta">chat on <time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> with <%= pluralize(post.comments.count,"comment") %></div>		
 	</header>
-	<%= textilize(post.content) %>
+	<ul>
+	<% 
+	interlocuters = Array.new
+	split = post.content.split("\r\n")
+	split.each do |line|
+	  this_line = line.rpartition(":")
+		interlocuters << this_line[0] unless interlocuters.include?(this_line[0])
+		this_interlocuter = interlocuters.index(this_line[0]) %>
+		<%= raw "<li><span id='interlocuter_#{this_interlocuter}'>#{this_line[0]}: </span>#{this_line[2]}</li>" %>
+	<% end %>
+	</ul>
 </article>
