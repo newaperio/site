@@ -11,7 +11,7 @@
 	  this_line = line.rpartition(":")
 		interlocuters << this_line[0] unless interlocuters.include?(this_line[0])
 		this_interlocuter = interlocuters.index(this_line[0]) %>
-		<%= raw "<li><span id='interlocuter_#{this_interlocuter}'>#{this_line[0]}: </span>#{this_line[2]}</li>" %>
+		<%= raw "<li><span id='interlocuter_#{this_interlocuter}'>#{this_line[0]}: </span>#{textilize(this_line[2])}</li>" %>
 	<% end %>
 	</ul>
 </article>

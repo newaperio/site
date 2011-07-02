@@ -448,6 +448,10 @@ article.chat {
    padding: 10px;
    border-bottom: 1px dotted #e5c244;
   }
+    article.chat li p {
+      display: inline;
+      margin-bottom: 0;
+    }
   article.chat .meta {
     font-weight: bold;
     color: #9e9f9f;
