@@ -6,8 +6,8 @@ class Post < ActiveRecord::Base
 
 	validates :title, :content, :author_id, :category_id, :post_type_id, :presence => true
 	
-	after_create :campfire
-	
+	after_create :campfire, :if => Proc.new { |p| Rails.env.production? }
+		
 	def to_param
     "#{id}-#{title.downcase.gsub(/[[:punct:]]/,'').gsub(/[^[:alnum:]]/,'-')}".strip.gsub(/-{2,}/,'-')
   end 

@@ -5,7 +5,7 @@ class Comment < ActiveRecord::Base
 	
 	before_save :http
 	
-	after_create :campfire
+	after_create :campfire, :if => Proc.new { |p| Rails.env.production? }
 	
 	private
 	
