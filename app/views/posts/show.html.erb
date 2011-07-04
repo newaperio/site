@@ -1,11 +1,11 @@
 <% title @post.title %>
-<%= render :partial => "posts/#{@post.post_type.name.downcase}", :locals => {:post => @post, :single => true} %>
+<%= render_post_type @post, false %>
 
 <h3>Comments</h3>
 
 <div id="comments">
 	<% if @comments.count > 0 %>
-	<%= render :partial => 'comment', :collection => @comments %>
+	<%= render @comments %>
 	<% else %>
 	  <p>No comments yet!</p>
 	<% end %>	

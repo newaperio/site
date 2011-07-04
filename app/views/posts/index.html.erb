@@ -1,5 +1,5 @@
 <% for post in @posts %>
-<%= render :partial => "posts/#{post.post_type.name.downcase}", :locals => {:post => post, :single => true} %>
+<%= render_post_type post %>
 <% end %>
 
 <%= paginate @posts %>
