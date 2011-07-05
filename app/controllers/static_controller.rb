@@ -1,6 +1,6 @@
 class StaticController < ApplicationController
   def home
-		@posts = Post.order("created_at desc").limit(3)
+		@posts = Post.order("created_at desc").where("post_type_id = ?",1).limit(3)
   end
 
   def about
