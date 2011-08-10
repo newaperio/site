@@ -9,7 +9,7 @@ module ApplicationHelper
   
   def render_post_type(post, single = false)
     post_type = post.post_type.name.downcase    
-    unless post_type == "post" || post_type == "chat"
+    unless post_type == "post" || post_type == "chat" || post_type == "video"
       post_type = "post"
     end
     render :partial => "posts/#{post_type}", :locals => {:post => post, :single => single}
