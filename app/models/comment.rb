@@ -7,6 +7,9 @@ class Comment < ActiveRecord::Base
 	
 	after_create :campfire, :if => Proc.new { |p| Rails.env.production? }
 	
+	attr_accessor :humans_only
+	validates :humans_only, :length => { :within => 0..1 }
+	
 	private
 	
 	def campfire
