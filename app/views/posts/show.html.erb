@@ -34,7 +34,10 @@
   <%= f.text_field :url %></p> 
   <p><%= f.label :content %><br />
   <%= f.text_area :content, :rows => '12', :cols => 35 %></p>
-	<%= f.hidden_field :humans_only %>
+  <p style="width: 1px; height: 1px; overflow: hidden;">
+		If you're a human, and you see this, don't put anything in here.
+    <%= f.text_area :humans_only %>
+  </p>
   
   <%= f.submit "Submit", :disable_with => 'Saving...' %>
 <% end %>
