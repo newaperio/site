@@ -9,7 +9,7 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem "coderay"
 gem "RedCloth"
 gem "redcarpet"
-gem 'activeadmin'
+gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
 gem "haml", "3.0.24"
 gem 'wirble', :group => :development
 gem 'hirb', :group => :development
