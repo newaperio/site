@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+load 'deploy/assets'
 
 set :application, "newaperio"
 set :repository,  "git@github.com:newaperio/site.git"
@@ -25,4 +26,8 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml" 
 		run "chmod -R 777 #{release_path}/public/"
   end
+end
+
+after 'deploy:update_code' do
+  run "cd #{release_path}; RAILS_ENV=production bundle exec rake assets:precompile"
 end
