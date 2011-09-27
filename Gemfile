@@ -1,16 +1,25 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
-gem 'rake', '~> 0.8.7'
-gem 'mysql2', '< 0.3'
+gem "rails", "3.1.0"
+gem 'rake'
+gem 'mysql2'
 gem 'capistrano'
 gem 'kaminari'
-gem "bcrypt-ruby", :require => "bcrypt"
 gem "coderay"
 gem "RedCloth"
 gem "redcarpet"
-gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
-gem "haml", "3.0.24"
-gem 'wirble', :group => :development
-gem 'hirb', :group => :development
+gem 'activeadmin'
 gem 'tinder'
+gem 'jquery-rails'
+gem "rails-boilerplate"
+
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
+
+group :development do
+  gem 'wirble'
+  gem 'hirb'  
+end

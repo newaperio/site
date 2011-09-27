@@ -2,17 +2,16 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# If you have a Gemfile, require the gems listed there, including any gems
-# you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env) if defined?(Bundler)
+if defined?(Bundler)
+  # If you precompile assets before deploying to production, use this line
+  Bundler.require *Rails.groups(:assets => %w(development test))
+  # If you want your assets lazily compiled in production, use this line
+  # Bundler.require(:default, :assets, Rails.env)
+end
 
 module Newaperio11
   class Application < Rails::Application
  		config.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log", 50, 1048576)
-    # Added by the Rails 3 jQuery Template
-	  # http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
-	  config.action_view.javascript_expansions[:defaults] = %w(jquery rails application)
-	  config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails application)
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -46,5 +45,11 @@ module Newaperio11
     config.filter_parameters += [:password]
 
     config.autoload_paths += %W(#{Rails.root}/lib)
+    
+    # Enable the asset pipeline
+    config.assets.enabled = true
+
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.0'
   end
 end
