@@ -17,6 +17,7 @@ gem 'sass-rails', "  ~> 3.1.0"
 group :assets do
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+  gem 'sass-rails', "  ~> 3.1.0"  
 end
 
 group :development do
