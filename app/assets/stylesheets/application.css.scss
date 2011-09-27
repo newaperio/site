@@ -1,20 +1,15 @@
 /*
-*= require reset
-*= require coderay
+*= require old_reset
 *= require_self
+*= require coderay
+*= require old_semantic_helpers
 */
 
-/* ==|== primary styles =====================================================
-   Author: Logan Leger
-   ========================================================================== */
-
-h1, h2, h3, h4, h5, h6 { font-weight: bold; padding: 0; margin: 0; }
-ol, ul { margin: 0; padding: 0; }
-
-address { font-style: normal; }
-
-a, a:active, a:visited { color: #6eb0a3; }
-a:hover { color: #c97836; }
+/**
+ * Primary styles
+ *
+ * Author: Logan Leger
+ */
 
 html, body {height: 100%;}
 body {
