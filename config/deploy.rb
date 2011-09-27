@@ -35,5 +35,5 @@ namespace :deploy do
   end
 end
 
-after "deploy:update_code", "deploy:database_yml"
+before "deploy:assets:precompile", "deploy:database_yml"
 before "deploy:restart", "deploy:make_public"
