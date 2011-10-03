@@ -21,8 +21,8 @@ module ApplicationHelper
       " staff" if email == "logan@newaperio.com"
     when "Evan Cordell"
       " staff" if email == "evan@newaperio.com"
-    when "Chris Keele"
-      " staff" if email == "chris@newaperio.com"
+    when "Christian Bankester"
+      " staff" if email == "christian@newaperio.com"
     end
   end
 end
