@@ -14,12 +14,4 @@ ActiveAdmin::Dashboards.build do
       end
     end
   end
-  
-  section "Recent Comments" do
-    ul do
-      Comment.limit(15).order("created_at DESC").collect do |comment|
-        li link_to(comment.post.title, admin_commenting_path(comment)) + " by #{comment.name}"
-      end
-    end
-  end
 end

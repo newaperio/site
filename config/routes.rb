@@ -10,7 +10,6 @@ Newaperio11::Application.routes.draw do
 	    get "category/:id" => "posts#category", :as => :category
 	    get "feed(.:format)" => "posts#feed", :as => :feed, :defaults => { :format => 'atom' }
 	  end
-	  resources :comments, :only => [:show, :create]
 	end
 	root :to => "static#home"
 end

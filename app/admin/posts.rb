@@ -8,9 +8,6 @@ ActiveAdmin.register Post do
     column :category do |post|
       link_to post.category.name, admin_category_path(post.category.id)
     end
-    column :comments do |post|
-      post.comments.count.to_s
-    end
     column :created_at
     default_actions
   end
