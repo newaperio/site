@@ -30,7 +30,7 @@
 		<article>
 			<header>
 				<h5><%= link_to post.title, post %></h5>
-				<div class="meta"><time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time> &mdash; <%= pluralize(post.comments.count,"comment") %></div>
+				<div class="meta"><time datetime="<%= post.updated_at %>" pubdate><%= post.updated_at.to_s(:short) %></time></div>
 			</header>
 			<p><%= textilize(truncate(post.content, :length => 150)) %></p>
 			<% if post.content.length > 150 %><p><%= link_to "Continued", post %></p><% end %>

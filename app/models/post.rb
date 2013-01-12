@@ -2,7 +2,6 @@ class Post < ActiveRecord::Base
 	belongs_to :author
 	belongs_to :category
 	belongs_to :post_type
-	has_many :comments, :dependent => :destroy
 
 	validates :title, :content, :author_id, :category_id, :post_type_id, :presence => true
 	
