@@ -14,9 +14,8 @@ gem "rails-boilerplate"
 gem 'activeadmin'
 gem 'tinder'
 
-gem 'sass-rails', "~> 3.1"
-
 group :assets do
+  gem 'sass-rails', "~> 3.1"  
   gem 'coffee-rails', "~> 3.1"
   gem 'uglifier'
 end
