@@ -18,6 +18,7 @@ group :assets do
   gem 'sass-rails', "~> 3.1"  
   gem 'coffee-rails', "~> 3.1"
   gem 'uglifier'
+  gem "asset_sync"
 end
 
 gem 'unicorn', group: :production
