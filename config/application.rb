@@ -11,8 +11,6 @@ end
 
 module Newaperio11
   class Application < Rails::Application
- 		config.logger = Logger.new("#{Rails.root}/log/#{Rails.env}.log", 50, 1048576)
-
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
