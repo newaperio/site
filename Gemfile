@@ -19,3 +19,5 @@ group :assets do
   gem 'uglifier'
   gem 'sass-rails', "~> 3.1"
 end
+
+gem 'unicorn', group: :production
