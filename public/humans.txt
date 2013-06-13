@@ -3,7 +3,7 @@
 
 
 /* TEAM */
-  NewAperio: Logan Leger, Evan Cordell, Chris Keele
+  NewAperio: Logan Leger, Jonathan Hooper
   Site: http://newaperio.com
   Twitter: @newaperio
   Location: Baton Rouge, LA

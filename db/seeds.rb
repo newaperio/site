@@ -7,8 +7,7 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 Author.create([ {:name => 'Logan Leger', :email => 'logan@newaperio.com', :password => "iamawesome"},
-                {:name => "Evan Cordell", :email => "evan@newaperio.com", :password => "evanisajew"},
-                {:name => "Chris Keele", :email => "chris@newaperio.com", :password => "diabetesforlife"},
-                {:name => "NewAperio", :email => "hello@newaperio.com", :password => "NewAperioWinsEveryday"}])
+                {:name => 'Jonathan Hooper', :email => 'jonathan@newaperio.com', :password => "drivesajeep"},
+                {:name => "NewAperio", :email => "hello@newaperio.com", :password => "YGBFKM1337"}])
                 
 Category.create([{:name => "Rails"}, {:name => "iPhone"}, {:name => "iPad"}, {:name => "Android"}, {:name => "Entrepreneurship"}, {:name => "Design"}])

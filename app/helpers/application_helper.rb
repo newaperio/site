@@ -19,8 +19,8 @@ module ApplicationHelper
     case name
     when "Logan Leger"
       " staff" if email == "logan@newaperio.com"
-    when "Evan Cordell"
-      " staff" if email == "evan@newaperio.com"
+    when "Jonathan Hooper"
+      " staff" if email == "jonathan@newaperio.com"
     end
   end
 end
