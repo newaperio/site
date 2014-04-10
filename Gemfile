@@ -14,6 +14,7 @@ gem 'rails-boilerplate'
 
 gem 'devise',      '2.2.7'
 gem 'meta_search', '1.1.2'
+gem 'formtastic',  '~> 2.1.1'
 gem 'activeadmin', '0.4.0'
 gem 'tinder'
 
