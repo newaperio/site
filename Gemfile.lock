@@ -233,3 +233,6 @@ DEPENDENCIES
   tinder
   uglifier (>= 1.0.2)
   unicorn
+
+BUNDLED WITH
+   1.10.3
